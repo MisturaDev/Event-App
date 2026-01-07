@@ -41,7 +41,7 @@ view a list of reports in an easy-to-use mobile interface.
 
 | Report Event | Submitted Report |
 |--------------|-----------------|
-| ![Report Event](Report-Event.png) | ![Submitted Report](Submiited-Report.png) |
+| ![Report Event](img/Report-Event.png) | ![Submitted Report](img/Submiited-Report.png) |
 
 
 ##  How to Run
