@@ -39,7 +39,7 @@ view a list of reports in an easy-to-use mobile interface.
 
 1. Clone the repository:
    ```bash
-   https://github.com/TurahRae/Event-App.git
+   https://github.com/MisturaDev/Event-App.git
   
 2. Navigate to the project:
    ```bash
