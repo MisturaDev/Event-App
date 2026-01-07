@@ -37,13 +37,6 @@ view a list of reports in an easy-to-use mobile interface.
 
 ---
 
-## Screenshots
-
-| Report Event | Submitted Report |
-|--------------|-----------------|
-| ![Report Event](img/Report-Event.png) | ![Submitted Report](img/Submiited-Report.png) |
-
-
 ##  How to Run
 
 1. Clone the repository:
