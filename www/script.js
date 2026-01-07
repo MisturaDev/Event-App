@@ -9,7 +9,6 @@ document.getElementById('EventForm').addEventListener('submit', function(e)  {
     if (title && description && location && date) {
         const report = {title, description, location,date };
 
-         saveReport(report);
 
     alert ("Report Submitted!");
     this.reset();
@@ -22,12 +21,16 @@ document.getElementById('EventForm').addEventListener('submit', function(e)  {
 }
 );
 
+/*Old savereport with localstorage
 function saveReport(report){
     let reports = JSON.parse(localStorage.getItem('reports')) || [];
     reports.push(report);
     localStorage.setItem('reports', JSON.stringify(reports));
-}
+}*/
 
+
+
+/*Old loadReports with localstorage
 function loadReports(){
     let reportList = document.getElementById('reportList');
     reportList.innerHTML = '';
@@ -48,7 +51,28 @@ function loadReports(){
             `;
             reportList.appendChild(li);
          });
-    }
+    }*/
+   
+         // Function to fetch and display posts from WordPress API
+         async function loadReports() {
+    const response = await fetch('http://event-app-blog.local/wp-json/wp/v2/posts');
+    const posts = await response.json();
+
+    const reportList = document.getElementById("reportList");
+    reportList.innerHTML = "";
+
+    posts.forEach(post => {
+        const li = document.createElement("li");
+        li.innerHTML = `<strong>${post.title.rendered}</strong><br>${post.content.rendered}`;
+        reportList.appendChild(li);
+    });
+}
+
+// Call the function when the page loads
+document.addEventListener('DOMContentLoaded', function () {
+    loadReports();
+});
+
     
     function showSection(section){
         document.getElementById('report-section').style.display = section === 'report' ? 'block' : 'none'; 
