@@ -35,6 +35,15 @@ view a list of reports in an easy-to-use mobile interface.
 - JavaScript
 - Cordova
 
+---
+
+## Screenshots
+
+| Report Event | Submitted Report |
+|--------------|-----------------|
+| ![Report Event](Report-Event.png) | ![Submitted Report](Submiited-Report.png) |
+
+
 ##  How to Run
 
 1. Clone the repository:
